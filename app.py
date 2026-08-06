@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import pandas as pd
+import traceback
 
 from ai_analyzer import analyze_answer
 from score_manager import ScoreManager
@@ -16,8 +17,6 @@ score_manager = ScoreManager()
 # Home Page
 @app.route("/")
 def home():
-
-    # Dataset-la irundhu random question
     question = df.sample(n=1).iloc[0]
 
     return render_template(
@@ -31,41 +30,39 @@ def home():
 @app.route("/analyze", methods=["POST"])
 def analyze():
 
-    role = request.form["role"]
-    question = request.form["question"]
-    answer = request.form["answer"]
+    try:
+        role = request.form["role"]
+        question = request.form["question"]
+        answer = request.form["answer"]
 
-    result = analyze_answer(
-        question,
-        answer,
-        role
-    )
+        result = analyze_answer(question, answer, role)
 
-    print(result)
+        print("AI Result:", result)
 
-    score = result.get("score", 0)
-    feedback = result.get("feedback", "No feedback")
+        score = result.get("score", 0)
+        feedback = result.get("feedback", "No feedback")
 
-    score_manager.add_score(score)
+        score_manager.add_score(score)
 
-    save_report(
-        question,
-        role,
-        answer,
-        feedback
-    )
+        # Comment this temporarily for testing
+        # save_report(question, role, answer, feedback)
 
-    return render_template(
-        "result.html",
-        role=role,
-        question=question,
-        answer=answer,
-        feedback=feedback,
-        score=score,
-        average=score_manager.average_score(),
-        percentage=score_manager.percentage(),
-        result_status=score_manager.result()
-    )
+        return render_template(
+            "result.html",
+            role=role,
+            question=question,
+            answer=answer,
+            feedback=feedback,
+            score=score,
+            average=score_manager.average_score(),
+            percentage=score_manager.percentage(),
+            result_status=score_manager.result()
+        )
+
+    except Exception:
+        error = traceback.format_exc()
+        print(error)
+        return f"<pre>{error}</pre>", 500
 
 
 if __name__ == "__main__":
