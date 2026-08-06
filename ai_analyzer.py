@@ -14,13 +14,13 @@ def analyze_answer(question, answer, role="Software Engineer"):
 
     headers = {
         "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://ai-interview-analyzer.vercel.app",
+        "X-Title": "AI Interview Analyzer"
     }
 
     prompt = f"""
 You are an AI Interview Coach.
-
-Analyze the candidate answer for this interview.
 
 Role: {role}
 
@@ -29,8 +29,6 @@ Question:
 
 Candidate Answer:
 {answer}
-
-Give a short evaluation.
 
 Return only:
 
@@ -47,11 +45,9 @@ Feedback:
 
 Improved Answer:
 - Give a short correct answer example
-
-Keep everything concise. Avoid long explanations.
 """
 
-    data = {
+    payload = {
         "model": "openai/gpt-4o-mini",
         "messages": [
             {
@@ -63,40 +59,36 @@ Keep everything concise. Avoid long explanations.
         "max_tokens": 400
     }
 
-
-    response = requests.post(
-        url,
-        headers=headers,
-        json=data
-    )
-
-
-    result = response.json()
-
-
     try:
+        response = requests.post(
+            url,
+            headers=headers,
+            json=payload,
+            timeout=30
+        )
+
+        result = response.json()
+
+        print(result)
+
+        if "choices" not in result:
+            return {
+                "score": 0,
+                "feedback": result.get("error", {}).get("message", str(result))
+            }
 
         feedback = result["choices"][0]["message"]["content"]
 
-
-        score_match = re.search(
-            r"Score:\s*(\d+)",
-            feedback
-        )
-
-
-        score = int(score_match.group(1)) if score_match else 0
-
+        match = re.search(r"Score:\s*(\d+)", feedback)
+        score = int(match.group(1)) if match else 0
 
         return {
             "score": score,
             "feedback": feedback
         }
 
-
     except Exception as e:
-
         return {
             "score": 0,
-            "feedback": f"AI analysis failed: {str(e)}"
+            "feedback": str(e)
         }
