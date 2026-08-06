@@ -1,0 +1,28 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 18:45:21.358688
+
+Role: Software Engineer
+
+Question:
+When would you use hashmap over dictionary?
+
+Candidate Answer:
+I am fine 
+
+===== AI Evaluation =====
+Score: 2/10
+
+Strengths:
+- The candidate acknowledged that they were familiar with the question ("I am fine")
+
+Weaknesses:
+- The answer is completely irrelevant and does not address the question at all.
+- The candidate failed to demonstrate any understanding of the difference between HashMap and Dictionary.
+- The answer lacks any analysis, explanation or technical depth, making it evident that the candidate didn't put any thought into the question.
+
+Feedback:
+The candidate's answer suggests a lack of preparation and understanding of the question. A successful answer would involve explaining the technical differences between HashMap and Dictionary, including the language-specific nuances of this data structure and the common use cases for one over the other. For example, "I would use a HashMap in Java over a Dictionary (which is similar to HashMap in other languages) when I need a key-value data structure with average time complexity of O(1) for lookups, insertions and deletions, such as in caching, indexing, or frequent key-value pair operations. Additionally, Java's HashMap is more robust with respect to thread-safety and contains many built-in methods for efficient key iteration". 
+
+Improved Answer:
+"I would use a HashMap in Java over a Dictionary when I need a key-value data structure with an average time complexity of O(1) for lookups, insertions, and deletions, such as in caching, indexing, or frequent key-value pair operations. Additionally, Java's HashMap is more robust with respect to thread-safety and contains many built-in methods for efficient key iteration".

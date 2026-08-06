@@ -1,0 +1,28 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 18:33:36.695408
+
+Role: Software Engineer
+
+Question:
+When would you use inheritance over pointers?
+
+Candidate Answer:
+hello how are you 
+
+===== AI Evaluation =====
+Score: 0/10
+
+Strengths:
+
+* None
+
+Weaknesses:
+- The candidate failed to provide a relevant answer to the question.
+- The candidate ignored the question and responded with a greeting instead.
+
+Feedback:
+The candidate's answer is completely irrelevant to the question. The question is asking for a comparison between inheritance and pointers, and the candidate's response is a casual greeting. This suggests a lack of understanding of object-oriented programming concepts and poor preparation for technical interviews. The candidate should have provided a brief explanation of when they would use inheritance over pointers, such as in situations where code organization and reuse are important, or when polymorphism is necessary.
+
+Improved Answer:
+"Inheritance is generally preferred over pointers when code organization and reuse are important. For example, if we have a complex class hierarchy and need to create a new class that inherits properties and behavior from an existing class, then inheritance is a better choice. In contrast, pointers are suitable when we need to create a complex data structure that requires dynamic memory allocation or when we need to manually manage memory. However, in languages that support inheritance, such as Java or C++, inheritance is often a more intuitive and maintainable way to structure code."

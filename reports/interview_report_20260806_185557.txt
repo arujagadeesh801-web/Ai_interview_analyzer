@@ -1,0 +1,29 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 18:55:57.871484
+
+Role: Software Engineer
+
+Question:
+When would you use array over SQL injection?
+
+Candidate Answer:
+injection SQL injection it means SQL injection mean inside some values into the school database 
+
+===== AI Evaluation =====
+Score: 2/10
+
+Strengths:
+- The candidate is familiar with the term SQL injection.
+- The candidate mentions the concept of inserting values into a database.
+
+Weaknesses:
+- The candidate's answer is unrelated to the actual question.
+- The candidate fails to articulate a clear scenario where they would use an array over SQL injection.
+- The candidate's language is unclear and lacks technical precision.
+
+Feedback:
+The candidate's answer demonstrates a lack of understanding of the question and the topic. The candidate seems to be confused about the concept of SQL injection and its relation to arrays. A clear and concise answer would involve explaining a scenario where using an array would be more suitable than using SQL injection, such as when working with large datasets or performing complex data manipulation. 
+
+Improved Answer:
+"A scenario where I would use an array over SQL injection is when I need to perform a series of database operations that involve updating or inserting multiple records in a single query. In such cases, using an array to store the data and then applying the necessary operations would be more efficient and less prone to SQL injection vulnerabilities. For instance, when performing a bulk update or insertion of records, using an array to store the data and then executing a single query would be a better approach than using a series of individual queries that could be vulnerable to SQL injection attacks."

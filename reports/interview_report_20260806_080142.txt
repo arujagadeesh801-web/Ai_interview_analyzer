@@ -1,0 +1,37 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 08:01:42.227084
+
+Role: Software Engineer
+
+Question:
+When would you use tuple over deadlock?
+
+Candidate Answer:
+Tuple is immutable so it is deadlock in any places 
+
+===== AI Evaluation =====
+**Score: 2/10**
+
+**Strengths:**
+
+* The candidate attempts to provide a reason for using tuple over list.
+* They mention the immutability of tuples, which is a correct property of tuples.
+
+**Weaknesses:**
+
+* The candidate's answer is too vague and lacks clarity.
+* They incorrectly state that tuple is "deadlock" in any places, which is not a valid reason for using tuple over list.
+* The answer does not demonstrate a clear understanding of when to use tuples over lists.
+
+**Feedback:**
+
+The candidate's answer is not satisfactory because it does not provide a clear and concise reason for using tuple over list. While they mention the immutability of tuples, they do not explain how this property makes tuple a better choice in certain situations.
+
+In reality, tuples are used over lists when immutability is required, such as when storing data that should not be modified once created, or when working with data that needs to be thread-safe. Tuples are also used when the order of elements matters, such as when storing a collection of items that need to be iterated over in a specific order.
+
+**Improved Answer:**
+
+"I would use tuple over list when I need to store a collection of items that should not be modified once created. For example, if I'm storing a collection of coordinates in a 3D space, I would use a tuple to represent each coordinate, because once the coordinates are set, they should not be changed. Additionally, tuples are thread-safe, making them a better choice when working with multi-threaded applications. In contrast, lists are mutable and can be modified after creation, which may lead to unexpected behavior or bugs if not properly synchronized."
+
+This improved answer demonstrates a clear understanding of when to use tuples over lists, and provides specific examples and scenarios where tuples are a better choice.

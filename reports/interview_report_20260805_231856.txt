@@ -1,0 +1,34 @@
+===== AI Interview Report =====
+
+Date: 2026-08-05 23:18:56.344299
+
+Role: Software Engineer
+
+Question:
+Explain the difference between array and deadlock.
+
+Candidate Answer:
+hii
+
+===== AI Evaluation =====
+Score: 0/10
+
+Strengths:
+- None
+
+Weaknesses:
+- The candidate failed to address the question directly and provided a non-responsive answer.
+- The candidate did not demonstrate any understanding of the topic.
+
+Feedback:
+The candidate's response was completely unrelated to the question asked. In a real interview, this would be a major red flag. As a software engineer, it is essential to understand the difference between array and deadlock, which are fundamental concepts in computer science.
+
+Array and deadlock are two distinct concepts:
+
+* An array is a data structure that stores a collection of elements of the same data type in contiguous memory locations.
+* A deadlock, on the other hand, is a situation in which two or more processes are unable to continue executing because each is waiting for the other to release a resource.
+
+In a real-world scenario, understanding the difference between these two concepts is crucial in designing and implementing efficient and reliable software systems.
+
+Improved Answer:
+"An array is a data structure that stores a collection of elements of the same data type in contiguous memory locations. This allows for efficient access and manipulation of the elements. A deadlock, on the other hand, is a situation in which two or more processes are unable to continue executing because each is waiting for the other to release a resource. In software engineering, understanding the difference between array and deadlock is essential in designing and implementing efficient and reliable systems. For example, in a multi-threaded environment, a deadlock can occur when two threads are competing for the same resource, leading to a system failure. In contrast, an array is a fundamental data structure used in various algorithms and applications. The key takeaway is that array and deadlock are two distinct concepts with different implications in software design and implementation."

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Interview Coach</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2,#6a11cb);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    color:white;
+}
+
+.logo{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.title{
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+}
+
+.subtitle{
+    text-align:center;
+    opacity:0.8;
+    margin-bottom:30px;
+}
+
+.question-card{
+    background:rgba(255,255,255,0.15);
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:25px;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.question-card h3{
+    margin-bottom:15px;
+}
+
+.info-row{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:15px;
+}
+
+.badge{
+    padding:8px 16px;
+    border-radius:50px;
+    background:rgba(255,255,255,0.15);
+    font-size:14px;
+}
+
+.question-text{
+    font-size:18px;
+    line-height:1.7;
+}
+
+label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+textarea{
+    width:100%;
+    min-height:220px;
+    resize:none;
+    border:none;
+    outline:none;
+    border-radius:18px;
+    padding:20px;
+    font-size:16px;
+    background:rgba(255,255,255,0.92);
+    color:#222;
+}
+
+textarea:focus{
+    box-shadow:0 0 20px rgba(255,255,255,0.4);
+}
+
+.button-group{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    padding:14px 22px;
+    border-radius:14px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.mic-btn{
+    background:#ff416c;
+    color:white;
+}
+
+.mic-btn:hover{
+    transform:translateY(-3px);
+    background:#ff2d5e;
+}
+
+.analyze-btn{
+    background:#00d26a;
+    color:white;
+}
+
+.analyze-btn:hover{
+    transform:translateY(-3px);
+    background:#00bc5f;
+}
+
+.stop-btn{
+    background:#ff9800;
+    color:white;
+}
+
+.stop-btn:hover{
+    transform:translateY(-3px);
+}
+
+#status{
+    margin-top:20px;
+    font-weight:600;
+    text-align:center;
+}
+
+.listening{
+    color:#ffe082;
+}
+
+.success{
+    color:#7CFFB2;
+}
+
+.error{
+    color:#ffb3b3;
+}
+
+.footer{
+    margin-top:25px;
+    text-align:center;
+    opacity:.8;
+    font-size:14px;
+}
+
+.wave{
+    display:inline-block;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+@media(max-width:768px){
+
+.title{
+    font-size:28px;
+}
+
+.container{
+    padding:20px;
+}
+
+.button-group{
+    flex-direction:column;
+}
+
+.btn{
+    width:100%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">🤖</div>
+
+<div class="title">
+AI Interview Coach
+</div>
+
+<div class="subtitle">
+Practice • Analyze • Improve
+</div>
+
+<div class="question-card">
+
+<h3>📋 Interview Question</h3>
+
+<div class="info-row">
+
+<div class="badge">
+💼 {{ role }}
+</div>
+
+<div class="badge">
+🎯 AI Generated
+</div>
+
+</div>
+
+<div class="question-text">
+{{ question }}
+</div>
+
+</div>
+
+<form action="/analyze" method="POST">
+
+<input type="hidden" name="role" value="{{ role }}">
+<input type="hidden" name="question" value="{{ question }}">
+
+<label>
+✍ Your Answer
+</label>
+
+<textarea
+id="answer"
+name="answer"
+placeholder="Type your answer or use the microphone..."
+required></textarea>
+
+<div class="button-group">
+
+<button
+type="button"
+class="btn mic-btn"
+onclick="startRecognition()">
+🎤 Start Speaking
+</button>
+
+<button
+type="button"
+class="btn stop-btn"
+onclick="stopRecognition()">
+🛑 Stop Recording
+</button>
+
+<button
+type="submit"
+class="btn analyze-btn">
+🚀 Analyze Answer
+</button>
+
+</div>
+
+<p id="status"></p>
+
+</form>
+
+<div class="footer">
+Made with ❤️ using Flask + AI
+</div>
+
+</div>
+
+<script>
+
+let recognition;
+let isListening=false;
+
+function startRecognition(){
+
+if(!('webkitSpeechRecognition' in window)){
+alert("Speech Recognition not supported.");
+return;
+}
+
+recognition = new webkitSpeechRecognition();
+
+recognition.lang="en-IN";
+recognition.continuous=true;
+recognition.interimResults=false;
+
+document.getElementById("status").className="listening";
+document.getElementById("status").innerHTML=
+'<span class="wave">🎤</span> Listening...';
+
+recognition.start();
+
+isListening=true;
+
+recognition.onresult=function(event){
+
+let text="";
+
+for(
+let i=event.resultIndex;
+i<event.results.length;
+i++
+){
+text+=event.results[i][0].transcript+" ";
+}
+
+document.getElementById("answer").value += text;
+
+document.getElementById("status").className="success";
+
+document.getElementById("status").innerHTML=
+"✅ Voice Captured Successfully";
+};
+
+recognition.onerror=function(event){
+
+document.getElementById("status").className="error";
+
+document.getElementById("status").innerHTML=
+"❌ "+event.error;
+};
+
+recognition.onend=function(){
+
+if(isListening){
+
+document.getElementById("status").className="success";
+
+document.getElementById("status").innerHTML=
+"✅ Recording Completed";
+}
+};
+
+}
+
+function stopRecognition(){
+
+if(recognition){
+
+recognition.stop();
+
+isListening=false;
+
+document.getElementById("status").className="success";
+
+document.getElementById("status").innerHTML=
+"🛑 Recording Stopped";
+}
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 19:13:05.634200
+
+Role: Software Engineer
+
+Question:
+How does pointers work internally?
+
+Candidate Answer:
+Pointer is a variable that stores the address of another one variable 
+
+===== AI Evaluation =====
+Score: 4
+
+Strengths:
+- Correctly identifies that a pointer stores the address of another variable.
+- Demonstrates basic understanding of pointers.
+
+Weaknesses:
+- Lacks depth and detail about how pointers work internally (e.g., memory allocation, dereferencing).
+- Does not explain the implications or uses of pointers in programming.
+
+Feedback:
+The answer is a good starting point but needs more detail to demonstrate a deeper understanding of pointers. Discussing how pointers interact with memory would enhance your response.
+
+Improved Answer:
+Pointers are variables that store the memory address of another variable. Internally, they allow for efficient access and manipulation of data in memory, enabling features like dynamic memory allocation and the creation of data structures such as linked lists.

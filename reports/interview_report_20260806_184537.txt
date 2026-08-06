@@ -1,0 +1,28 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 18:45:37.129295
+
+Role: Software Engineer
+
+Question:
+When would you use hashmap over dictionary?
+
+Candidate Answer:
+I am fine 
+
+===== AI Evaluation =====
+Score: 2/10
+
+Strengths:
+- The candidate showed a brief moment of hesitation, which can indicate a moment of self-awareness.
+
+Weaknesses:
+- The candidate failed to provide a clear and concise answer to the question.
+- The candidate's response was extremely brief and lacked any meaningful content.
+- The candidate did not demonstrate any understanding of the differences between a hashmap and a dictionary.
+
+Feedback:
+The candidate's answer was lacking in several areas. Firstly, they failed to address the question directly, instead responding with a brief and non-descriptive phrase ("I am fine"). This does not demonstrate any understanding of the topic or the ability to think critically. Secondly, the candidate did not provide any context or explanation for when they would use a hashmap over a dictionary. This is a crucial aspect of the question, and the candidate's failure to address it suggests a lack of knowledge in this area. 
+
+Improved Answer:
+A better sample answer would be: "I would use a hashmap over a dictionary when I need to store a large number of key-value pairs and need to ensure efficient lookups, insertions, and deletions. Hashmaps are particularly useful when the order of the keys does not matter, and the keys are hashable. For example, in a web cache, I would use a hashmap to store the URLs and their corresponding cache values, as it would allow for fast lookups and efficient updates." This answer demonstrates a clear understanding of the differences between a hashmap and a dictionary, and provides a specific scenario where a hashmap would be the better choice.

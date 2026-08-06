@@ -1,0 +1,35 @@
+===== AI Interview Report =====
+
+Date: 2026-08-05 23:24:01.536639
+
+Role: Software Engineer
+
+Question:
+What is garbage collection and how is it used?
+
+Candidate Answer:
+garbage collection placed outer areas it is used to store the wastes
+
+===== AI Evaluation =====
+Score: 2/10
+
+Strengths:
+
+* The candidate mentions the term "garbage collection"
+* Shows some basic understanding of the concept
+
+Weaknesses:
+
+* The answer is incomplete and lacks technical accuracy
+* The sentence structure is grammatically incorrect and contains ambiguity
+* The concept of garbage collection is oversimplified and lacks context
+
+Feedback:
+
+The candidate's answer demonstrates a minimal understanding of the concept of garbage collection, but it is clear that they do not have a deep understanding of the subject. To improve, the candidate should focus on providing a clear and concise explanation of garbage collection, its purpose, and its benefits.
+
+Improved Answer:
+
+"Garbage collection is a critical component of a programming language's memory management system. It is a process that automatically identifies and reclaims memory occupied by objects that are no longer needed or referenced in the program. This process is accomplished through a garbage collector, a piece of software that scans the program's memory and identifies objects that are not in use. By reclaiming these objects, the garbage collector helps to prevent memory leaks, improve program efficiency, and reduce the risk of crashes due to memory-related errors.
+
+Garbage collection is commonly used in languages like Java, C#, and Python, and it can be implemented using various algorithms and techniques, such as mark-and-sweep, reference counting, and generational collection. The benefits of garbage collection include improved memory safety, reduced memory leaks, and the ability to write more efficient and scalable code."

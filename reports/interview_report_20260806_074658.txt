@@ -1,0 +1,37 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 07:46:58.125254
+
+Role: HR
+
+Question:
+What steps do you take to adapt to change?
+
+Candidate Answer:
+first i'll clearly understand the change . then i takes forward steps
+
+===== AI Evaluation =====
+**Score: 4/10**
+
+**Strengths:**
+
+- The candidate shows an initial understanding of the importance of adapting to change.
+- They attempt to provide a step-by-step approach to adapting to change.
+
+**Weaknesses:**
+
+- The candidate's answer is very brief and lacks clarity.
+- The steps they provide are vague and do not offer any specific examples or strategies for adapting to change.
+- The language used is informal, and the tone is not professional.
+
+**Feedback:**
+
+The candidate's answer, although well-intentioned, does not demonstrate a thorough understanding of how to adapt to change. To improve, the candidate should provide more detailed and specific examples of how they would approach adapting to change in a real-world scenario. They should also use more professional language and tone.
+
+**Improved Answer:**
+
+Here's an example of a better answer:
+
+"When faced with change, my first step is to seek clarification on the nature of the change and its impact on the team or organization. I would then assess the change from multiple angles, considering its potential benefits, challenges, and any potential risks. Next, I would develop a contingency plan, outlining the steps we would take to mitigate any negative effects and capitalize on opportunities. I would also communicate the change clearly and transparently to the team, ensuring everyone is aware of the new expectations and requirements. Finally, I would be open to feedback and willing to adjust our approach as needed to ensure a smooth transition and optimal outcomes."
+
+This improved answer demonstrates a more comprehensive approach to adapting to change, including seeking clarification, assessing the change, developing a contingency plan, communicating effectively, and being open to feedback and adjustment.

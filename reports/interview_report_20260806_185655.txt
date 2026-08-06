@@ -1,0 +1,34 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 18:56:55.842090
+
+Role: Software Engineer
+
+Question:
+Explain the difference between hashmap and encapsulation.
+
+Candidate Answer:
+Hiiiiii
+
+===== AI Evaluation =====
+Score: 0/10
+
+Strengths:
+- None
+
+Weaknesses:
+- Lack of understanding of the technical question, as the answer is unrelated to the topic of hashmap and encapsulation.
+- No effort was made to provide a technical explanation, instead, the candidate responded with a greeting.
+- The answer is incomplete, providing no meaningful information about the requested topics.
+
+Feedback:
+The candidate failed to demonstrate any knowledge of the technical concepts requested by the question. A good answer would have provided a clear and concise explanation of the difference between a hashmap and encapsulation, including their definitions, use cases, and key characteristics. The candidate's response should be focused on the technical aspects of the question, providing a well-structured and detailed explanation.
+
+Improved Answer:
+"To explain the difference between hashmap and encapsulation, we need to understand their individual definitions.
+
+A hashmap is a data structure that stores key-value pairs in a way that allows for efficient retrieval of values based on their corresponding keys. It uses a hash function to map keys to indices of a backing array, enabling fast lookups, insertions, and deletions. Hashmaps are commonly used in caching, databases, and web development.
+
+Encapsulation, on the other hand, is a software design principle that binds together the data and the methods that manipulate that data, hiding the internal implementation details from the outside world. This helps to increase code modularity, make code more maintainable, and reduce unintended side effects. Encapsulation is typically implemented using classes or objects in object-oriented programming languages.
+
+The key difference between the two is that hashmap is a data structure focused on efficient data storage and retrieval, while encapsulation is a design principle concerned with controlling access to data and methods. While a hashmap is useful for managing a set of discrete key-value pairs, encapsulation is useful for controlling how data is accessed and modified within a software system."

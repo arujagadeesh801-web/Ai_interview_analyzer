@@ -1,0 +1,35 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 18:45:34.614232
+
+Role: Software Engineer
+
+Question:
+When would you use hashmap over dictionary?
+
+Candidate Answer:
+I am fine 
+
+===== AI Evaluation =====
+Score: 2/10
+
+Strengths:
+- Attempted to answer the question
+- Briefly mentioned 'I am fine'
+
+Weaknesses:
+- Failed to grasp the core difference between a hashmap and a dictionary
+- Did not provide a clear reason for choosing one over the other
+- Answer appears to be dismissive and unconfident
+
+Feedback:
+The candidate's answer lacks clarity, confidence, and technical expertise. In a real-world scenario, a hashmap and a dictionary are equivalent data structures in many programming languages. However, the question seems to be probing for a deeper understanding of the differences between these data structures and when to use one over the other.
+
+To answer the question effectively, the candidate should consider the following points:
+
+- A hashmap is typically a custom implementation in certain languages and often uses separate chaining to resolve collisions.
+- A dictionary, on the other hand, is often the built-in data structure provided by the language itself.
+- Hashmap implementations can be more efficient and flexible, allowing for custom resizing and collision resolution strategies.
+
+Improved Answer:
+"I would use a hashmap over a dictionary in situations where I need to customize the underlying implementation, such as implementing a custom resizing strategy or a specific collision resolution algorithm. Additionally, in languages where the dictionary is a built-in data structure with fixed capabilities, using a custom hashmap implementation could provide better performance and flexibility. For example, in Java, we might use a ConcurrentHashMap over an HashMap to get thread-safe access."

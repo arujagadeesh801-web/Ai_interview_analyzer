@@ -1,0 +1,28 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 19:16:17.910188
+
+Role: Software Engineer
+
+Question:
+Explain the difference between stack and lambda function.
+
+Candidate Answer:
+hello my name is Sabir Bhatt 
+
+===== AI Evaluation =====
+Score: 1
+
+Strengths:
+- Candidate introduces themselves, showing confidence.
+- Attempts to engage with the interviewer.
+
+Weaknesses:
+- Fails to answer the question about stack and lambda functions.
+- Lacks relevant technical knowledge and focus.
+
+Feedback:
+The candidate did not address the question, which is critical for a software engineering role. It's essential to provide clear and relevant technical explanations.
+
+Improved Answer:
+A stack is a data structure that follows the Last In, First Out (LIFO) principle, while a lambda function is an anonymous function defined with the `lambda` keyword in programming, often used for short, throwaway functions.

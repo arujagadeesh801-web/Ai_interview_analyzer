@@ -1,0 +1,32 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 08:07:20.123454
+
+Role: Software Engineer
+
+Question:
+When would you use SQL injection over queue?
+
+Candidate Answer:
+In python 
+
+===== AI Evaluation =====
+Score: 4/10
+
+Strengths:
+- The candidate mentions Python, which shows they are familiar with the programming language.
+- They use the term "SQL injection", which indicates they are aware of the concept.
+
+Weaknesses:
+- The candidate fails to provide a clear and concise answer about the situation where they would use SQL injection over queuing.
+- The answer lacks depth and nuance, making it unclear what they mean by "use SQL injection over queue".
+- No clear mention of any specific queues or queuing technology, making it seem like they are not familiar with the context.
+- The answer seems to be more focused on listing the programming language than providing a thoughtful response.
+
+Feedback:
+The candidate seems to be struggling to articulate a clear response. They seem to be aware of the technology, but fail to apply it to a relevant scenario. To improve, the candidate should focus on providing a specific example of a situation where using SQL injection over queuing would be beneficial, and explain the technical trade-offs and considerations involved.
+
+Improved Answer:
+"In a situation where we need to interface with a legacy database and can't modify its architecture, I would consider using SQL injection over queuing. For instance, let's say we have an existing SQL server that doesn't have an API or data streaming capabilities, but we need to integrate it with a modern application that relies on microservices. Instead of creating a custom interface to integrate with the legacy system, I would use SQL injection to directly query the database. This approach would allow us to leverage the capabilities of the database, while minimizing the development effort and overhead of creating a separate queuing system. However, we would need to carefully consider the security implications of using SQL injection, and implement proper security measures to prevent SQL injection attacks."
+
+In this improved answer, the candidate shows a better understanding of the context and provides a concrete example of a scenario where SQL injection would be a viable solution. They also highlight the trade-offs and potential challenges involved in using SQL injection, demonstrating a more comprehensive understanding of the technology and its application.

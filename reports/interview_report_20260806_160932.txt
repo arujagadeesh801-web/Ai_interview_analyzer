@@ -1,0 +1,28 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 16:09:32.620002
+
+Role: HR
+
+Question:
+How do you typically handle situations where you need to adapt to change?
+
+Candidate Answer:
+    I will handle the situations calmly 
+
+===== AI Evaluation =====
+Score: 4/10
+
+Strengths:
+- The candidate shows an awareness of the importance of handling change calmly.
+- They demonstrate a willingness to adapt to changing situations.
+
+Weaknesses:
+- The answer is too vague and lacks specific examples or details about how they would handle change.
+- The candidate fails to provide any concrete strategies or actions they would take in a situation where they need to adapt to change.
+
+Feedback:
+While the candidate shows a positive attitude towards handling change, their answer lacks depth and specificity. In a real-world scenario, it's essential to provide concrete examples of how you would handle change, such as by communicating with stakeholders, assessing the impact of the change, and developing a plan to adapt to the new situation. A more effective answer would demonstrate a clear understanding of the challenges and opportunities that come with change and provide a step-by-step approach to handling it.
+
+Improved Answer:
+"I've handled situations where I needed to adapt to change by first taking a step back to assess the impact of the change on our team and processes. I then communicate with stakeholders to ensure everyone is on the same page and understand the reasons behind the change. Next, I develop a plan to adapt to the new situation, which may involve re-prioritizing tasks, adjusting timelines, or seeking additional resources. Throughout the process, I maintain open communication with my team and stakeholders to ensure a smooth transition and minimize disruptions. By being proactive and adaptable, I've been able to navigate complex changes and ensure our team's continued success."

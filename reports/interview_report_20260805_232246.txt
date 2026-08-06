@@ -1,0 +1,34 @@
+===== AI Interview Report =====
+
+Date: 2026-08-05 23:22:46.797364
+
+Role: Software Engineer
+
+Question:
+When would you use inheritance over multithreading?
+
+Candidate Answer:
+yeah i will have a routine in multireading
+
+===== AI Evaluation =====
+Score: 2/10
+
+Strengths:
+- The candidate has some familiarity with the concept of multithreading.
+
+Weaknesses:
+- The candidate completely misunderstands the question and provides an unrelated answer (multireading).
+- The answer lacks clarity, coherence, and relevance to the question.
+- The candidate fails to demonstrate any understanding of the concept of inheritance or multithreading.
+
+Feedback:
+This answer is a clear indication that the candidate has not prepared well for the interview. They seem to have confused two unrelated concepts and failed to provide a relevant answer. Inheritance and multithreading are two distinct concepts in programming, and the candidate's response shows a lack of understanding of both.
+
+To answer this question correctly, the candidate should have explained the scenarios where inheritance would be preferred over multithreading. For example, they could have mentioned that inheritance is used to create a hierarchy of classes that share common attributes and methods, whereas multithreading is used to improve the performance and responsiveness of a program by executing multiple threads concurrently.
+
+Improved Answer:
+"I would use inheritance over multithreading in situations where I need to create a hierarchy of classes that share common attributes and methods. For instance, if I'm building a system that has different types of vehicles, such as cars, trucks, and motorcycles, I would use inheritance to create a base class 'Vehicle' and then create subclasses 'Car', 'Truck', and 'Motorcycle' that inherit the common attributes and methods from the base class. This allows me to reuse code and avoid duplication.
+
+In contrast, I would use multithreading when I need to improve the performance and responsiveness of a program by executing multiple threads concurrently. For example, if I'm building a web server that needs to handle multiple requests simultaneously, I would use multithreading to create multiple threads that can handle each request independently, improving the overall performance of the system."
+
+This improved answer demonstrates a clear understanding of the concepts of inheritance and multithreading and provides specific examples of when to use each.

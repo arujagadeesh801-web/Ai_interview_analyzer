@@ -1,0 +1,30 @@
+===== AI Interview Report =====
+
+Date: 2026-08-06 18:53:22.217790
+
+Role: Software Engineer
+
+Question:
+Explain the difference between deadlock and garbage collection.
+
+Candidate Answer:
+garbages collection of garbage properties 
+
+===== AI Evaluation =====
+Score: 2/10
+
+Strengths:
+- The candidate attempted to answer the question
+- They attempted to use relevant keywords (garbage collection, properties)
+
+Weaknesses:
+- The answer is completely off-topic, unrelated to the actual difference between deadlock and garbage collection
+- The candidate seems to be using buzzwords without any understanding of the concepts
+
+Feedback:
+The candidate's answer is not related to the question at all. Deadlock and garbage collection are two distinct concepts in software engineering, where deadlock refers to a situation in a multithreaded application where two or more threads are unable to proceed because each is waiting for the other to release a resource, whereas garbage collection is a mechanism used by programming languages to automatically manage memory by identifying and freeing up memory occupied by unnecessary objects. A good answer would clearly explain the difference between these two concepts, using relevant examples or analogies to illustrate the point. The candidate should start by defining what deadlock and garbage collection are, and then explain how they differ. A better answer would also demonstrate an understanding of the underlying concepts and mechanisms.
+
+Improved Answer:
+"Deadlock and garbage collection are two different concepts in software engineering. A deadlock is a situation that occurs when two or more threads are unable to proceed because each is waiting for the other to release a resource. For example, imagine two threads, A and B, where thread A has a lock on a resource and is waiting for thread B to release a resource, and thread B is waiting for thread A to release the lock it has on the resource. In this case, neither thread can proceed, resulting in a deadlock.
+
+Garbage collection, on the other hand, is a mechanism used by programming languages to automatically manage memory. It identifies and frees up memory occupied by objects that are no longer needed or referenced. The garbage collector periodically scans the application's memory to identify these objects and reclaims the memory, making it available for reuse. The key difference between deadlock and garbage collection is that deadlock is a concurrency issue that occurs due to conflicting resources, whereas garbage collection is a memory management mechanism that is not related to concurrency."
