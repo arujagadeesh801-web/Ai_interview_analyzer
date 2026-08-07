@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,378 +20,546 @@
 }
 
 body{
+
     min-height:100vh;
-    background:linear-gradient(135deg,#667eea,#764ba2,#6a11cb);
-    background-size:400% 400%;
-    animation:bgMove 12s ease infinite;
     display:flex;
     justify-content:center;
     align-items:center;
     padding:20px;
+    overflow-x:hidden;
+    background:#050816;
+    color:white;
+
 }
 
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+/* Animated Background */
+
+body::before{
+
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#00e5ff;
+filter:blur(180px);
+opacity:.18;
+top:-120px;
+left:-120px;
+animation:moveOne 12s infinite alternate;
+
+}
+
+body::after{
+
+content:"";
+position:fixed;
+width:450px;
+height:450px;
+background:#8b5cf6;
+filter:blur(180px);
+opacity:.18;
+bottom:-120px;
+right:-120px;
+animation:moveTwo 14s infinite alternate;
+
+}
+
+@keyframes moveOne{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(120px,80px);
+}
+
+}
+
+@keyframes moveTwo{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(-100px,-60px);
+}
+
 }
 
 .container{
-    width:100%;
-    max-width:900px;
-    backdrop-filter:blur(18px);
-    background:rgba(255,255,255,0.12);
-    border:1px solid rgba(255,255,255,0.2);
-    border-radius:25px;
-    padding:35px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.25);
-    color:white;
+
+position:relative;
+width:100%;
+max-width:950px;
+background:#101522;
+border:1px solid rgba(0,229,255,.25);
+border-radius:24px;
+padding:35px;
+box-shadow:
+
+0 0 25px rgba(0,229,255,.20),
+0 0 60px rgba(0,229,255,.10);
+
+backdrop-filter:blur(12px);
+
+z-index:10;
+
 }
 
 .logo{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:10px;
+
+font-size:55px;
+text-align:center;
+margin-bottom:10px;
+animation:floatLogo 3s ease-in-out infinite;
+
+}
+
+@keyframes floatLogo{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
 }
 
 .title{
-    text-align:center;
-    font-size:34px;
-    font-weight:700;
+
+font-size:38px;
+font-weight:700;
+text-align:center;
+color:#00e5ff;
+text-shadow:
+
+0 0 12px #00e5ff,
+0 0 28px #00e5ff;
+
 }
 
 .subtitle{
-    text-align:center;
-    opacity:0.8;
-    margin-bottom:30px;
+
+margin-top:8px;
+text-align:center;
+font-size:16px;
+color:#b8c5d9;
+margin-bottom:35px;
+
 }
 
 .question-card{
-    background:rgba(255,255,255,0.15);
-    border-radius:18px;
-    padding:20px;
-    margin-bottom:25px;
-    border:1px solid rgba(255,255,255,0.15);
+
+background:#161d2d;
+border:1px solid rgba(0,229,255,.25);
+border-radius:18px;
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 0 20px rgba(0,229,255,.12);
+
 }
 
 .question-card h3{
-    margin-bottom:15px;
+
+margin-bottom:18px;
+font-size:22px;
+color:#00e5ff;
+
 }
 
 .info-row{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
+
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-bottom:20px;
+
 }
 
 .badge{
-    padding:8px 16px;
-    border-radius:50px;
-    background:rgba(255,255,255,0.15);
-    font-size:14px;
+
+padding:8px 18px;
+border-radius:50px;
+background:rgba(0,229,255,.12);
+border:1px solid rgba(0,229,255,.25);
+color:#00e5ff;
+font-size:14px;
+font-weight:600;
+
 }
 
 .question-text{
-    font-size:18px;
-    line-height:1.7;
+
+font-size:19px;
+line-height:1.8;
+color:#f2f2f2;
+
 }
 
 label{
-    display:block;
-    margin-bottom:10px;
-    font-weight:600;
+
+display:block;
+margin-bottom:10px;
+font-size:18px;
+font-weight:600;
+
 }
 
 textarea{
-    width:100%;
-    min-height:220px;
-    resize:none;
-    border:none;
-    outline:none;
-    border-radius:18px;
-    padding:20px;
-    font-size:16px;
-    background:rgba(255,255,255,0.92);
-    color:#222;
+
+width:100%;
+height:220px;
+padding:20px;
+border-radius:18px;
+border:1px solid rgba(0,229,255,.25);
+background:#0e1523;
+color:white;
+font-size:16px;
+resize:none;
+outline:none;
+transition:.3s;
+
 }
 
 textarea:focus{
-    box-shadow:0 0 20px rgba(255,255,255,0.4);
+
+border-color:#00e5ff;
+box-shadow:
+
+0 0 15px rgba(0,229,255,.35);
+
 }
 
 .button-group{
-    margin-top:20px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
+
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:22px;
+
 }
 
 .btn{
-    border:none;
-    cursor:pointer;
-    padding:14px 22px;
-    border-radius:14px;
-    font-size:15px;
-    font-weight:600;
-    transition:.3s;
+
+flex:1;
+padding:15px;
+border:none;
+border-radius:14px;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+
 }
 
 .mic-btn{
-    background:#ff416c;
-    color:white;
-}
 
-.mic-btn:hover{
-    transform:translateY(-3px);
-    background:#ff2d5e;
-}
+background:#00c8ff;
+color:black;
+box-shadow:0 0 15px #00c8ff;
 
-.analyze-btn{
-    background:#00d26a;
-    color:white;
-}
-
-.analyze-btn:hover{
-    transform:translateY(-3px);
-    background:#00bc5f;
 }
 
 .stop-btn{
-    background:#ff9800;
-    color:white;
+
+background:#ff9800;
+color:white;
+box-shadow:0 0 15px #ff9800;
+
 }
 
-.stop-btn:hover{
-    transform:translateY(-3px);
+.analyze-btn{
+
+background:#00e676;
+color:black;
+box-shadow:0 0 15px #00e676;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px) scale(1.03);
+
 }
 
 #status{
-    margin-top:20px;
-    font-weight:600;
-    text-align:center;
-}
 
-.listening{
-    color:#ffe082;
+margin-top:20px;
+font-weight:600;
+text-align:center;
+
 }
 
 .success{
-    color:#7CFFB2;
+
+color:#00ff9d;
+
 }
 
 .error{
-    color:#ffb3b3;
+
+color:#ff6b6b;
+
 }
 
-.footer{
-    margin-top:25px;
-    text-align:center;
-    opacity:.8;
-    font-size:14px;
+.listening{
+
+color:#ffd54f;
+
 }
 
 .wave{
-    display:inline-block;
-    animation:pulse 1s infinite;
+
+display:inline-block;
+animation:pulse 1s infinite;
+
 }
 
 @keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.2);}
-    100%{transform:scale(1);}
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.2);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+.footer{
+
+margin-top:30px;
+text-align:center;
+color:#9db0cb;
+font-size:14px;
+
 }
 
 @media(max-width:768px){
 
-.title{
-    font-size:28px;
+.container{
+
+padding:20px;
+
 }
 
-.container{
-    padding:20px;
+.title{
+
+font-size:30px;
+
 }
 
 .button-group{
-    flex-direction:column;
+
+flex-direction:column;
+
 }
 
 .btn{
-    width:100%;
+
+width:100%;
+
 }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<div class="logo">🤖</div>
+    <div class="logo">🤖</div>
 
-<div class="title">
-AI Interview Coach
-</div>
+    <h1 class="title">AI Interview Coach</h1>
 
-<div class="subtitle">
-Practice • Analyze • Improve
-</div>
+    <p class="subtitle">
+        Practice • Analyze • Improve • Get AI Feedback
+    </p>
 
-<div class="question-card">
+    <div class="question-card">
 
-<h3>📋 Interview Question</h3>
+        <h3>📋 Interview Question</h3>
 
-<div class="info-row">
+        <div class="info-row">
 
-<div class="badge">
-💼 {{ role }}
-</div>
+            <div class="badge">
+                💼 {{ role }}
+            </div>
 
-<div class="badge">
-🎯 AI Generated
-</div>
+            <div class="badge">
+                🤖 AI Generated
+            </div>
 
-</div>
+            <div class="badge">
+                🚀 Professional Mode
+            </div>
 
-<div class="question-text">
-{{ question }}
-</div>
+        </div>
 
-</div>
+        <div class="question-text">
+            {{ question }}
+        </div>
 
-<form action="/analyze" method="POST">
+    </div>
 
-<input type="hidden" name="role" value="{{ role }}">
-<input type="hidden" name="question" value="{{ question }}">
+    <form action="/analyze" method="POST">
 
-<label>
-✍ Your Answer
-</label>
+        <input
+            type="hidden"
+            name="role"
+            value="{{ role }}">
 
-<textarea
-id="answer"
-name="answer"
-placeholder="Type your answer or use the microphone..."
-required></textarea>
+        <input
+            type="hidden"
+            name="question"
+            value="{{ question }}">
 
-<div class="button-group">
+        <label for="answer">
+             Answer
+        </label>
 
-<button
-type="button"
-class="btn mic-btn"
-onclick="startRecognition()">
-🎤 Start Speaking
-</button>
+        <textarea
+            id="answer"
+            name="answer"
+            placeholder="Type your answer here or click 'Start Speaking'..."
+            required></textarea>
 
-<button
-type="button"
-class="btn stop-btn"
-onclick="stopRecognition()">
-🛑 Stop Recording
-</button>
+        <div class="button-group">
 
-<button
-type="submit"
-class="btn analyze-btn">
-🚀 Analyze Answer
-</button>
+            <button
+                type="button"
+                class="btn mic-btn"
+                onclick="startRecognition()">
 
-</div>
+                🎤 Start Speaking
 
-<p id="status"></p>
+            </button>
 
-</form>
+            <button
+                type="button"
+                class="btn stop-btn"
+                onclick="stopRecognition()">
 
-<div class="footer">
-Made with ❤️ using Flask + AI
-</div>
+                🛑 Stop Recording
+
+            </button>
+
+            <button
+                type="submit"
+                class="btn analyze-btn">
+
+                🚀 Analyze Answer
+
+            </button>
+
+        </div>
+
+        <p id="status"></p>
+
+    </form>
+
+    <div class="footer">
+
+    </div>
 
 </div>
 
 <script>
 
 let recognition;
-let isListening=false;
+let isListening = false;
 
 function startRecognition(){
 
-if(!('webkitSpeechRecognition' in window)){
-alert("Speech Recognition not supported.");
-return;
-}
+    if(!('webkitSpeechRecognition' in window)){
+        alert("Speech Recognition is not supported in this browser.");
+        return;
+    }
 
-recognition = new webkitSpeechRecognition();
+    recognition = new webkitSpeechRecognition();
 
-recognition.lang="en-IN";
-recognition.continuous=true;
-recognition.interimResults=false;
+    recognition.lang = "en-IN";
+    recognition.continuous = true;
+    recognition.interimResults = false;
 
-document.getElementById("status").className="listening";
-document.getElementById("status").innerHTML=
-'<span class="wave">🎤</span> Listening...';
+    isListening = true;
 
-recognition.start();
+    const status = document.getElementById("status");
 
-isListening=true;
+    status.className = "listening";
+    status.innerHTML =
+    '<span class="wave">🎤</span> Listening... Speak now';
 
-recognition.onresult=function(event){
+    recognition.start();
 
-let text="";
+    recognition.onresult = function(event){
 
-for(
-let i=event.resultIndex;
-i<event.results.length;
-i++
-){
-text+=event.results[i][0].transcript+" ";
-}
+        let transcript = "";
 
-document.getElementById("answer").value += text;
+        for(let i = event.resultIndex; i < event.results.length; i++){
 
-document.getElementById("status").className="success";
+            transcript += event.results[i][0].transcript + " ";
 
-document.getElementById("status").innerHTML=
-"✅ Voice Captured Successfully";
-};
+        }
 
-recognition.onerror=function(event){
+        document.getElementById("answer").value += transcript;
 
-document.getElementById("status").className="error";
+        status.className = "success";
+        status.innerHTML = "✅ Voice Captured Successfully";
 
-document.getElementById("status").innerHTML=
-"❌ "+event.error;
-};
+    };
 
-recognition.onend=function(){
+    recognition.onerror = function(event){
 
-if(isListening){
+        status.className = "error";
+        status.innerHTML = "❌ " + event.error;
 
-document.getElementById("status").className="success";
+    };
 
-document.getElementById("status").innerHTML=
-"✅ Recording Completed";
-}
-};
+    recognition.onend = function(){
+
+        if(isListening){
+
+            status.className = "success";
+            status.innerHTML = "✅ Recording Completed";
+
+        }
+
+    };
 
 }
 
 function stopRecognition(){
 
-if(recognition){
+    if(recognition){
 
-recognition.stop();
+        isListening = false;
 
-isListening=false;
+        recognition.stop();
 
-document.getElementById("status").className="success";
+        const status = document.getElementById("status");
 
-document.getElementById("status").innerHTML=
-"🛑 Recording Stopped";
-}
+        status.className = "success";
+        status.innerHTML = "🛑 Recording Stopped";
+
+    }
+
 }
 
 </script>
 
 </body>
+
 </html>
